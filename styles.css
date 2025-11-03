@@ -84,7 +84,7 @@ body {
 ------------------------------ */
 .hero {
   height: 80vh;
-  background: url("img/render1.jpg") center/cover no-repeat;
+  background: url("img/fondo.png") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -302,6 +302,52 @@ body {
   margin-bottom: 1rem;
   line-height: 1.5;
 }
+
+/* ------------------------------
+   TABLA DE COSTOS (MODAL)
+------------------------------ */
+.cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  background-color: var(--color-fondo);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cost-table th,
+.cost-table td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+}
+
+.cost-table thead {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  font-weight: 600;
+}
+
+.cost-table tbody tr:nth-child(even) {
+  background-color: #f4eceb;
+}
+
+.cost-table tbody tr:hover {
+  background-color: #f0e0dd;
+}
+
+.cost-table tfoot {
+  background-color: var(--color-secundario);
+  color: var(--color-blanco);
+  font-weight: 600;
+}
+
+.tiempo {
+  margin-top: 1rem;
+  color: var(--color-oscuro);
+}
+
 
 .modal .close {
   position: absolute;
