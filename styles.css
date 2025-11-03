@@ -34,6 +34,7 @@ body {
 /* ------------------------------
    NAVBAR
 ------------------------------ */
+/* --- NAVBAR --- */
 .navbar {
   width: 100%;
   display: flex;
@@ -41,20 +42,29 @@ body {
   align-items: center;
   background-color: var(--color-oscuro);
   color: var(--color-blanco);
-  padding: 1rem 2rem;
+  padding: 0.8rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
+/* --- LOGO --- */
 .navbar .logo {
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+  height: 45px; /* altura equilibrada para desktop */
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
+.navbar .logo:hover {
+  transform: scale(1.05);
+}
+
+/* --- NAV LINKS --- */
 .nav-links {
   display: flex;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -62,14 +72,16 @@ body {
   color: var(--color-blanco);
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-links a:hover {
   color: var(--color-primario);
+  transform: translateY(-2px);
 }
 
-/* Burger button */
+/* --- BURGER BUTTON --- */
 .burger {
   display: none;
   background: none;
@@ -78,6 +90,7 @@ body {
   color: var(--color-blanco);
   cursor: pointer;
 }
+
 
 /* ------------------------------
    HERO
@@ -404,6 +417,30 @@ body {
 
 /* Móviles */
 @media (max-width: 768px) {
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: var(--color-oscuro);
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .navbar .logo {
+    height: 38px;
+  }
   .nav-links {
     display: none;
     flex-direction: column;
