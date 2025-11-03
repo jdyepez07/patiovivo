@@ -1,4 +1,9 @@
 /* ------------------------------
+   IMPORTAR FUENTE
+------------------------------ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* ------------------------------
    PALETA Y FUENTES
 ------------------------------ */
 :root {
@@ -15,13 +20,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--fuente-base);
 }
 
 body {
   background-color: var(--color-fondo);
   color: var(--color-texto);
   overflow-x: hidden;
+  font-family: var(--fuente-base);
+  font-weight: 400;
 }
 
 /* ------------------------------
@@ -42,7 +49,7 @@ body {
 
 .navbar .logo {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 1px;
 }
 
@@ -101,17 +108,19 @@ body {
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .hero p {
   font-size: 1.2rem;
+  font-weight: 300;
 }
 
 /* ------------------------------
    PORTAFOLIO
 ------------------------------ */
 .portafolio {
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   text-align: center;
 }
 
@@ -119,6 +128,99 @@ body {
   font-size: 2rem;
   color: var(--color-oscuro);
   margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+/* ------------------------------
+   PORTAFOLIO REALIZADOS
+------------------------------ */
+.portafolio-realizados {
+  padding: 2rem 2rem;
+  background-color: var(--color-fondo);
+  text-align: center;
+}
+
+.portafolio-realizados h2 {
+  font-size: 2.2rem;
+  color: var(--color-oscuro);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.portafolio-realizados .section-desc {
+  color: var(--color-secundario);
+  margin-bottom: 3rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+/* GRID DE IMÁGENES */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0 1rem;
+}
+
+/* ITEM INDIVIDUAL */
+.portfolio-item {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--color-blanco);
+}
+
+.portfolio-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+/* OVERLAY DE INFORMACIÓN */
+.portfolio-info {
+  position: absolute;
+  inset: 0;
+  background: rgba(75, 46, 40, 0.7);
+  color: var(--color-blanco);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  transition: opacity 0.4s ease;
+  text-align: center;
+}
+
+.portfolio-item:hover .portfolio-info {
+  opacity: 1;
+}
+
+.portfolio-info h3 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.portfolio-info p {
+  font-weight: 300;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 .cards-container {
@@ -157,11 +259,13 @@ body {
 .card-info h3 {
   color: var(--color-oscuro);
   margin-bottom: 0.5rem;
+  font-weight: 500;
 }
 
 .card-info p {
   color: var(--color-secundario);
   font-size: 0.95rem;
+  font-weight: 400;
 }
 
 /* ------------------------------
@@ -191,6 +295,7 @@ body {
 .modal-content h2 {
   color: var(--color-oscuro);
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .modal-content p {
@@ -228,6 +333,7 @@ body {
   text-align: center;
   padding: 2rem;
   font-size: 0.9rem;
+  font-weight: 300;
 }
 
 .footer a {
@@ -281,6 +387,22 @@ body {
 
   .gallery img {
     width: 100%;
+  }
+
+  .portfolio-info {
+    position: static;
+    background: none;
+    color: var(--color-texto);
+    opacity: 1;
+    padding: 1rem;
+  }
+
+  .portfolio-item:hover img {
+    transform: none;
+  }
+
+  .portfolio-item {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   }
 }
 

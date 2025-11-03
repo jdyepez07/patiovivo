@@ -5,12 +5,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Patio Vivo</title>
-  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Tipografía -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -19,24 +23,26 @@
     <div class="logo">Patio Vivo</div>
     <nav class="nav-links" id="navLinks">
       <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
       <a href="#portafolio">Portafolio</a>
       <a href="#contacto">Contacto</a>
     </nav>
     <button class="burger" id="burgerBtn">&#9776;</button>
   </header>
 
-  <!-- HERO / INICIO -->
+  <!-- HERO -->
   <section id="inicio" class="hero">
     <div class="hero-content">
       <h1>Patio Vivo</h1>
-      <p>Diseños que combinan estética, sostenibilidad y funcionalidad.</p>
+      <p>Diseñamos espacios que respiran naturaleza, bienestar y armonía.</p>
     </div>
   </section>
 
-  <!-- PORTAFOLIO -->
-  <section id="portafolio" class="portafolio">
-    <h2>Nuestros Proyectos y Servicios</h2>
-
+  <!-- SERVICIOS -->
+  <section id="servicios" class="portafolio">
+    <h2>Nuestros Servicios</h2>
+    <p class="section-desc">Diseñamos patios, terrazas y espacios interiores con un enfoque sostenible y personalizado.</p>
+    <br>
     <div class="cards-container">
       <!-- Card 1 -->
       <div class="card" data-modal="modal1">
@@ -70,23 +76,51 @@
     </div>
   </section>
 
-  <!-- MODALES -->
+  <!-- PORTAFOLIO -->
+  <section id="portafolio" class="portafolio-realizados">
+    <h2>Proyectos Realizados</h2>
+    <p class="section-desc">Algunos de nuestros proyectos destacados que reflejan la esencia de Patio Vivo.</p>
+
+    <div class="gallery-grid">
+      <div class="portfolio-item">
+        <img src="img/render1.jpg" alt="Patio de luz natural" />
+        <div class="portfolio-info">
+          <h3>Patio de Luz Natural</h3>
+          <p>Diseño interior que integra vegetación y ventilación natural en una vivienda urbana.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="img/render1.jpg" alt="Terraza verde en vivienda" />
+        <div class="portfolio-info">
+          <h3>Terraza Verde</h3>
+          <p>Espacio elevado con vegetación nativa, ideal para el descanso y la contemplación.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="img/render1.jpg" alt="Jardín interior minimalista" />
+        <div class="portfolio-info">
+          <h3>Jardín Interior Minimalista</h3>
+          <p>Ambiente sencillo, elegante y funcional que conecta la arquitectura con la naturaleza.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODALES (servicios) -->
   <!-- Modal 1 -->
   <div id="modal1" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>Casa Patio Zen</h2>
-      <p>
-        Proyecto residencial inspirado en la serenidad de los patios japoneses,
-        con materiales naturales y ventilación cruzada.
-      </p>
+      <p>Proyecto residencial inspirado en la serenidad de los patios japoneses, con materiales naturales y ventilación cruzada.</p>
       <div class="gallery">
         <img src="img/zen1.jpg" alt="Render principal" />
         <img src="img/zen2.jpg" alt="Planta arquitectónica" />
         <img src="img/zen3.jpg" alt="Axonometría" />
       </div>
       <div class="details">
-        <br>
         <p><strong>Desglose de costos:</strong> diseño $15M, estructura $50M, acabados $20M</p>
         <p><strong>Tiempo total:</strong> 6 meses</p>
       </div>
@@ -98,17 +132,13 @@
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>Vivienda Tropical</h2>
-      <p>
-        Espacio diseñado para climas cálidos, aprovechando la luz natural y
-        ventilación pasiva con materiales sostenibles.
-      </p>
+      <p>Espacio diseñado para climas cálidos, aprovechando la luz natural y ventilación pasiva con materiales sostenibles.</p>
       <div class="gallery">
         <img src="img/tropical1.jpg" alt="Render principal" />
         <img src="img/tropical2.jpg" alt="Planta" />
         <img src="img/tropical3.jpg" alt="Corte transversal" />
       </div>
       <div class="details">
-        <br>
         <p><strong>Desglose de costos:</strong> diseño $20M, estructura $70M, acabados $30M</p>
         <p><strong>Tiempo total:</strong> 8 meses</p>
       </div>
@@ -120,17 +150,13 @@
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>Casa Modular</h2>
-      <p>
-        Vivienda eficiente basada en módulos prefabricados que reducen costos y
-        tiempos de construcción sin perder calidad estética.
-      </p>
+      <p>Vivienda eficiente basada en módulos prefabricados que reducen costos y tiempos de construcción sin perder calidad estética.</p>
       <div class="gallery">
         <img src="img/modular1.jpg" alt="Render principal" />
         <img src="img/modular2.jpg" alt="Planta" />
         <img src="img/modular3.jpg" alt="Axonometría" />
       </div>
       <div class="details">
-        <br>
         <p><strong>Desglose de costos:</strong> diseño $10M, estructura $35M, acabados $15M</p>
         <p><strong>Tiempo total:</strong> 4 meses</p>
       </div>
@@ -141,10 +167,10 @@
   <footer id="contacto" class="footer">
     <p>© 2025 Patio Vivo | Diseños que combinan estética, sostenibilidad y funcionalidad</p>
     <p>
-      Contáctanos: <a href="mailto:info@calimoderna.co">info@patiovivo.co</a>
+      Contáctanos: <a href="mailto:info@patiovivo.co">info@patiovivo.co</a>
     </p>
     <p>
-      Síguenos en redes sociales:
+      Síguenos en:
       <a href="#">Facebook</a> |
       <a href="#">Instagram</a> |
       <a href="#">LinkedIn</a>
